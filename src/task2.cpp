@@ -12,7 +12,7 @@ bool checkPrime(unsigned int value) {
 }
 
 unsigned long long nPrime(unsigned n) {
-    unsigned long long answer = 2, count = 0;
+    unsigned long long answer = 1, count = 0;
     while(count != n) {
         answer++;
         if(checkPrime(answer)) {
