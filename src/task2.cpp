@@ -3,6 +3,8 @@
 //
 #include "task2.h"
 #include <cmath>
+#include <iostream>
+
 bool checkPrime(unsigned int value) {
     for(unsigned long long i = 2; i * i <= value; i++) {
         if(value % i == 0)
@@ -23,9 +25,10 @@ unsigned long long nPrime(unsigned n) {
 }
 
 unsigned long long nextPrime(unsigned long long value) {
-    unsigned long long answer = value;
+    unsigned long long answer = value+1;
+
     while(!checkPrime(answer)) {
-        answer--;
+        answer++;
     }
     return answer;
 }
